@@ -25,7 +25,7 @@ npm install -g deploymate
 deploymate init
 ```
 
-This will create a `cicd.config.json` file with your deployment settings.
+This will create a `deploy.json` file with your deployment settings.
 
 2. Generate the GitHub Actions workflow:
 
