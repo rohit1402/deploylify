@@ -1,6 +1,6 @@
 # Deploymate
 
-A CLI tool that helps developers set up automated CI/CD pipelines for deploying services to AWS EC2 instances via GitHub Actions.
+A CLI tool that helps developers set up automated deployment of services to AWS EC2 instances via GitHub Actions.
 
 ## Features
 
