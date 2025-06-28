@@ -1,0 +1,26 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - ${deployBranch}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Execute remote commands
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}.git
+          # Private environment variables from GitHub secrets
+${envSecrets}
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          envs: GITHUB_SHA,GITHUB_REPOSITORY_URL,${envSecretNames}
+          script: |
+${remoteCommands}
