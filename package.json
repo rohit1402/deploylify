@@ -1,6 +1,6 @@
 {
   "name": "deploylify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool for automated CI/CD deployments to AWS EC2 via GitHub Actions",
   "main": "dist/index.js",
   "bin": {
