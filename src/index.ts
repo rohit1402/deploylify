@@ -8,13 +8,13 @@ import { version as packageVersion } from './../package.json'
 const program = new Command();
 
 program
-  .name('deploymate')
+  .name('deploylify')
   .description('CI/CD automation for AWS EC2 deployments')
   .version(packageVersion);
 
 program
   .command('init')
-  .description('Initialize deploymate configuration')
+  .description('Initialize deploylify configuration')
   .option('-y, --yes', 'Use default values without prompting')
   .action(initCommand);
 

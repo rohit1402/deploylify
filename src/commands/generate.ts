@@ -12,7 +12,7 @@ export async function generateCommand() {
 
   if (!await fs.pathExists(CONFIG_PATH)) {
     console.error(chalk.red('Error: deploy.json not found'));
-    console.log('Run ' + chalk.cyan('deploymate init') + ' first to create a configuration');
+    console.log('Run ' + chalk.cyan('deploylify init') + ' first to create a configuration');
     process.exit(1);
   }
 

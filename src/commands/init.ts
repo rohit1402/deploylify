@@ -32,7 +32,7 @@ interface InitOptions {
 const CONFIG_PATH = path.join(process.cwd(), 'deploy.json');
 
 export async function initCommand(options: InitOptions) {
-  console.log(chalk.blue('Initializing deploymate configuration...'));
+  console.log(chalk.blue('Initializing deploylify configuration...'));
 
   if (options.yes) {
     await fs.writeJSON(CONFIG_PATH, defaultConfig, { spaces: 2 });
@@ -42,7 +42,7 @@ export async function initCommand(options: InitOptions) {
     console.log('2. Add general environment variables in the env.general section');
     console.log('3. List private environment variables in the env.private section');
     console.log('4. Create GitHub secrets for each private environment variable');
-    console.log('5. Run ' + chalk.cyan('deploymate generate') + ' to create the GitHub workflow');
+    console.log('5. Run ' + chalk.cyan('deploylify generate') + ' to create the GitHub workflow');
     console.log('\nRequired GitHub Secrets:');
     console.log('   - EC2_HOST');
     console.log('   - EC2_USER');
@@ -131,7 +131,7 @@ export async function initCommand(options: InitOptions) {
   console.log('2. Add general environment variables in the env.general section');
   console.log('3. List private environment variables in the env.private section');
   console.log('4. Create GitHub secrets for each private environment variable');
-  console.log('5. Run ' + chalk.cyan('deploymate generate') + ' to create the GitHub workflow');
+  console.log('5. Run ' + chalk.cyan('deploylify generate') + ' to create the GitHub workflow');
   console.log('\nRequired GitHub Secrets:');
   console.log('   - EC2_HOST');
   console.log('   - EC2_USER');

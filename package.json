@@ -1,10 +1,10 @@
 {
-  "name": "deploymate",
+  "name": "deploylify",
   "version": "1.0.0",
   "description": "A CLI tool for automated CI/CD deployments to AWS EC2 via GitHub Actions",
   "main": "dist/index.js",
   "bin": {
-    "deploymate": "./dist/index.js"
+    "deploylify": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",

@@ -1,4 +1,4 @@
-# Deploymate
+# deploylify
 
 A CLI tool that helps developers set up automated deployment of services to AWS EC2 instances via GitHub Actions.
 
@@ -14,7 +14,7 @@ A CLI tool that helps developers set up automated deployment of services to AWS 
 ## Installation
 
 ```bash
-npm install -g deploymate
+npm install -g deploylify
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ npm install -g deploymate
 1. Initialize a new configuration:
 
 ```bash
-deploymate init
+deploylify init
 ```
 
 This will create a `deploy.json` file with your deployment settings.
@@ -30,7 +30,7 @@ This will create a `deploy.json` file with your deployment settings.
 2. Generate the GitHub Actions workflow:
 
 ```bash
-deploymate generate
+deploylify generate
 ```
 
 This creates the `.github/workflows/deploy.yml` file that handles the automated deployment.
@@ -59,13 +59,13 @@ This creates the `.github/workflows/deploy.yml` file that handles the automated 
 
 ```bash
 git add .
-git commit -m "Setup CI/CD with deploymate"
+git commit -m "Setup CI/CD with deploylify"
 git push
 ```
 
 ## Prerequisites
 
-Before using Deploymate, ensure you have:
+Before using deploylify, ensure you have:
 
 1. An AWS EC2 instance running:
    - [Launch a new EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
@@ -118,7 +118,7 @@ Note: SSH authentication is handled entirely through the `EC2_KEY` GitHub secret
 
 ## Environment Variables
 
-Deploymate supports two types of environment variables:
+deploylify supports two types of environment variables:
 
 ### 1. General Environment Variables
 These are non-sensitive variables that can be directly specified in your `cicd.config.json`:
