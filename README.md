@@ -1,6 +1,6 @@
-# deploylify
+# Deploylify
 
-A CLI tool that helps developers set up automated deployment of services to AWS EC2 instances via GitHub Actions.
+A CLI tool that helps developers to set up automated deployment of services to AWS EC2 instances via GitHub Actions.
 
 ## Features
 
