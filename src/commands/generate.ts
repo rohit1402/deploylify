@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import { Config } from '../types';
 import { processTemplate } from '../utils/template';
 
-const TEMPLATE_PATH = path.join(__dirname, '../../templates/github/deploy.yaml');
+const TEMPLATE_PATH = path.join(__dirname, '../../templates/github/deploy.yml');
 const CONFIG_PATH = path.join(process.cwd(), 'deploy.json');
 
 export async function generateCommand() {
